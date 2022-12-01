@@ -5,7 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
-const loginRoutes_1 = __importDefault(require("./routes/loginRoutes"));
 const checkoutRoutes_1 = __importDefault(require("./routes/checkoutRoutes"));
 class Server {
     constructor() {
@@ -14,8 +13,8 @@ class Server {
         this.routes();
     }
     config() {
-        // this.app.set('port', process.env.PORT || 3000);
-        this.app.set('port', 3000);
+        this.app.set('port', process.env.PORT || 3000);
+        // this.app.set('port', 3000);
         // CORS
         // this.app.use(function(req, res, next) {
         //     console.log('req es : ', req);
@@ -52,7 +51,6 @@ class Server {
         //     }
         //   }
         // this.app.use('/', cors(configuracionCORS),indexRoutes);
-        this.app.use('/api/login', loginRoutes_1.default);
         this.app.use('/api/checkout', checkoutRoutes_1.default);
     }
     // ==================================================
