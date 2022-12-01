@@ -144,7 +144,7 @@ function createPaymentMercadoPago(name, price, unit, img) {
                 failure: "https://localhost:3000.com/error"
                 // url a la que va a redireccionar si falla el pago
             },
-            notification_url: "https://mercadopago-checkout.herokuapp.com/webhook",
+            notification_url: "https://api-mercadopago-checkout.herokuapp.com/webhook",
             // declaramos nuestra url donde recibiremos las notificaciones
             auto_return: "approved"
             // si la compra es exitosa automaticamente redirige a "success" de back_urls
