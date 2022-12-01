@@ -8,6 +8,7 @@ const indexController_1 = __importDefault(require("../controllers/indexControlle
 class IndexRoutes {
     constructor() {
         this.router = (0, express_1.Router)();
+        console.log("its working MP");
         this.config();
     }
     config() {

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const checkoutRoutes_1 = __importDefault(require("./routes/checkoutRoutes"));
+const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -50,7 +51,7 @@ class Server {
         //       }
         //     }
         //   }
-        // this.app.use('/', cors(configuracionCORS),indexRoutes);
+        this.app.use('/', indexRoutes_1.default);
         this.app.use('/api/checkout', checkoutRoutes_1.default);
     }
     // ==================================================
