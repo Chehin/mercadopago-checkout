@@ -58,8 +58,8 @@ class Server {
     //   Inicio el servicio en el puerto 3000
     // ==================================================
     start() {
-        this.app.listen(this.app.get('port'), () => {
-            console.log('Server en puerto', this.app.get('port'));
+        this.app.listen((process.env.PORT || 3000), () => {
+            console.log('Server en puerto', process.env.PORT || 3000);
         });
     }
 }

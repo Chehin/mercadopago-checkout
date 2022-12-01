@@ -17,4 +17,3 @@ class IndexRoutes {
 }
 const indexRoutes = new IndexRoutes();
 exports.default = indexRoutes.router;
-// export default new GameRoutes().router;
