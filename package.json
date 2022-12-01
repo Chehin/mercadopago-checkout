@@ -5,7 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon ./build"
+        "dev": "nodemon ./build",
+        "start": "node index.js",
+        "start:dev": "nodemon index.js"
     },
     "keywords": [
         "ecommerce"
